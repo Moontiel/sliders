@@ -1,0 +1,135 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header,
+footer {
+	text-align: center;
+	background-color: cadetblue;
+	color: #fff;
+	height: 70px;
+}
+
+/*
+	section_name: contenedor definido para implementar
+	margin o padding con el fin de separar las secciones
+	entre si
+*/
+.section_name {
+	padding: 50px 0;
+
+	/*
+		container_name: contenedor definido para manejar
+		el responsive implementando width
+	*/
+	.container_name {
+		width: 90%;
+		margin: 0 auto;
+
+		/*
+			flexbox_name: contenedor definido para 
+			implementar flexbox si se requiere
+		*/
+		.flexbox_name {
+			/*
+				swiper: tiene definido por defecto position: relative esto
+				evita que los iconos de la paginacion se desplazen hacia 
+				arriba cuando reducimos el alto de la pantalla, finalmente 
+				padding nos ayuda a ampliar la altura de este contenedor 
+				evitando que los iconos de la navegacion se monten encima 
+				de las targetas
+			*/
+			.swiper {
+				/*
+					swiper-wrapper
+				*/
+				.swiper-wrapper {
+					/*
+						swiper-slide: para modificar el ancho o alto de este 
+						contenedor implementamos la propiedad width y heigth
+						este nos ayuda a que los elementos contenidos por
+						este no desmaqueten
+					*/
+					.swiper-slide {
+						width: 100%;
+						height: 400px;
+
+						/*
+							tag-img: la propiedad vertical-align: top 
+							remueve el espaciado que genera el navegador
+							en las tag-img, es importante definir un width
+							y height igual al de su contenedor padre mas la
+							propiedad object-fit: cover; para que esta se 
+							ajuste al contenedor 
+						*/
+						img {
+							vertical-align: top;
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+				}
+
+				/*
+					swiper-button-next, swiper-button-prev: estas tags tienen por 
+					defecto position absolute asi que podemos implementar las 
+					propiedades top, left, right o bottom para posicionar estos 
+					iconos ademas de otras propiedades que nos permiten personalizar
+					estos iconos
+				*/
+				.swiper-button-next,
+				.swiper-button-prev {
+					background-color: darkcyan;
+					border-radius: 100%;
+					width: 50px;
+					height: 50px;
+
+					/*
+						:after: para cambiar estas propiedades debemos hacerlo
+						haciendo uso del pseudo elemento ::after
+					*/
+					&:after {
+						color: #fff;
+						font-size: 25px;
+						font-weight: bold;
+					}
+				}
+
+				/*
+					swiper-button-next: definiendo la propiedad right podemos
+					determinar la posicion de este icono
+				*/
+				.swiper-button-next {
+					right: 40px;
+				}
+
+				/*
+					swiper-button-prev: definiendo la propiedad left podemos
+					determinar la posicion de este icono
+				*/
+				.swiper-button-prev {
+					left: 40px;
+				}
+
+				/*
+					swiper-pagination: tiene definido por defecto 
+					position: absolute por lo que si implementamos
+					la propiedad bottom podemos posicionar los numeros
+					que marcan el slider, tambien podemos manejar el 
+					width de este contenedor y el centrado de los iconos
+				*/
+				.swiper-pagination {
+					bottom: 0;
+					color: #fff;
+					background-color: rgba(0, 139, 139, 0.575);
+					font-size: 2rem;
+					font-weight: 600;
+					padding: 12px 0;
+				}
+			}
+		}
+	}
+}

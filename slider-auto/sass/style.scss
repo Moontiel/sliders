@@ -1,0 +1,88 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header,
+footer {
+	text-align: center;
+	background-color: cadetblue;
+	color: #fff;
+	height: 70px;
+}
+
+/*
+	section_name: contenedor definido para implementar
+	margin o padding con el fin de separar las secciones
+	entre si
+*/
+.section_name {
+	padding: 50px 0;
+
+	/*
+		container_name: contenedor definido para manejar
+		el responsive implementando width
+	*/
+	.container_name {
+		width: 90%;
+		margin: 0 auto;
+
+		/*
+			flexbox_name: contenedor definido para 
+			implementar flexbox si se requiere
+		*/
+		.flexbox_name {
+			/*
+				box_name: definimos position: relative ya que su elemento
+                hijo tiene un position: absolute; este contenedor es el 
+                encargado de darle el ancho y alto al slider
+			*/
+			.box_name {
+				position: relative;
+				height: 340px;
+				box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
+
+				/*
+                    mask_name: definimos position: absolute de esta manera
+                    la imagen pasa a estar detras de este contenedor haciendo
+                    uso de las propiedades top, left, right y bottom este 
+                    toma todo el ancho del contenedor padre finalmente
+                    definimos flexbox y sus propiedades justify-content y
+                    align-items para centrar la mascara vertical y horizontalmente
+                */
+				.mask_name {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					background: linear-gradient(
+						to right,
+						rgba(0, 0, 0, 0.6),
+						rgba(0, 0, 0, 0.3)
+					);
+					color: #fff;
+				}
+
+				/*
+                    tag-img: la propiedad vertical-align: top 
+                    remueve el espaciado que genera el navegador
+                    en las tag-img, es importante definir un width
+                    y height igual al de su contenedor padre mas la
+                    propiedad object-fit: cover; para que esta se 
+                    ajuste al contenedor 
+                */
+				img {
+					vertical-align: top;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+}

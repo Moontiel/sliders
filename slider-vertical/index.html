@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+		/>
+		<title>Slider vertical</title>
+		<link rel="stylesheet" href="./sass/style.css" />
+		<!-- Swiper css -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
+	</head>
+
+	<body>
+		<header>header</header>
+
+		<!--  
+			section_name: contenedor de la seccion
+		-->
+		<div class="section_name">
+			<!-- 			 
+				container_name: contenedor encargado del 
+				responsive
+			-->
+			<div class="container_name">
+				<!--  
+					flexbox_name: contenedor definido para
+					implementar flexbox
+				-->
+				<div class="flexbox_name">
+					<!--  
+						swiper: contenedor de swiper-wrapper la
+						clase mySwiper es implementada en javascript
+					-->
+					<div class="swiper mySwiper">
+						<!--  
+							swiper-wrapper: contenedor de 3 swiper-slide
+						-->
+						<div class="swiper-wrapper">
+							<!--  
+								swiper-slide: contenedor de 1 tag-img
+							-->
+							<div class="swiper-slide">
+								<!--  
+									tag-img: imagen del slider
+								-->
+								<img src="./assets/img/03.jpg" alt="img" />
+							</div>
+
+							<div class="swiper-slide">
+								<img src="./assets/img/02.jpg" alt="img" />
+							</div>
+
+							<div class="swiper-slide">
+								<img src="./assets/img/01.jpg" alt="img" />
+							</div>
+						</div>
+
+						<!--  
+							swiper-pagination: esta clase es implementada
+							en javascript
+						-->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>footer</footer>
+
+		<!-- Swiper js -->
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="./sass/style.css" />
+		<title>Slider complete</title>
+	</head>
+
+	<body>
+		<header>header</header>
+
+		<!--  
+			section_name: contenedor de la seccion
+		-->
+		<div class="section_name">
+			<!--  
+				container_name: contenedor encargado del 
+				responsive
+			-->
+			<div class="container_name">
+				<!--  
+					flexbox_name: contenedor definido para
+					implementar flexbox
+				-->
+				<div class="flexbox_name">
+					<!--  
+						content_slider: contenedor de 3 box_slider y 
+						1 box_icons
+					-->
+					<div class="content_slider">
+						<!--  
+							box_slider: contenedor de 1 slider_caption y 
+							1 tag-img esta misma clase es implementada en
+							javascript
+						-->
+						<div class="box_slider">
+							<!--  
+								slider_caption: contenedor de 1 tag-h3 y 
+								1 tag-p
+							-->
+							<section class="slider_caption">
+								<!--  
+									tag-h3: titulo del slider
+								-->
+								<h3>CAT</h3>
+
+								<!--  
+									tag-p: parrafo del slider
+								-->
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</section>
+
+							<!--  
+								tag-img: imagen del slider
+							-->
+							<img src="./assets/img/img-min-1.jpg" alt="img" />
+						</div>
+
+						<div class="box_slider">
+							<section class="slider_caption">
+								<h3>FOX</h3>
+
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</section>
+
+							<img src="./assets/img/img-min-3.jpg" alt="img" />
+						</div>
+
+						<div class="box_slider">
+							<section class="slider_caption">
+								<h3>BEAR</h3>
+
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</section>
+
+							<img src="./assets/img/img-min-4.jpg" alt="img" />
+						</div>
+
+						<!-- 
+							box_icons: contenedor de 2 tag-svg 
+						-->
+						<div class="box_icons">
+							<!--  
+								tag-svg: icono para ir atras le definimos un ID
+								para implementar esta tag en javascript
+							-->
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								id="icon-prev"
+							>
+								<path
+									d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"
+								></path>
+							</svg>
+
+							<!--  
+								tag-svg: icono para ir adelante le definimos un ID
+								para implementar esta tag en javascript
+							-->
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								id="icon-next"
+							>
+								<path
+									d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+								></path>
+							</svg>
+						</div>
+					</div>
+
+					<!-- 
+						content_dots: contenedor de 3 tags-span 
+					-->
+					<div class="content_dots">
+						<!--  
+							tag-span: las implementamos para crear los 
+							marcadores del slider le definimos un clase
+							para implementar esta tag en javascript
+						-->
+						<span class="dot_slider"></span>
+						<span class="dot_slider"></span>
+						<span class="dot_slider"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>footer</footer>
+
+		<!-- Script Js -->
+		<script src="./js/main.js"></script>
+	</body>
+</html>

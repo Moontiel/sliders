@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<title>Slider target</title>
+		<link rel="stylesheet" href="./sass/style.css" />
+		<!-- Swiper css -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
+	</head>
+
+	<body>
+		<header>header</header>
+
+		<!--  
+			section_name: contenedor de la seccion
+		-->
+		<div class="section_name">
+			<!--  
+				container_name: contenedor encargado del 
+				responsive
+			-->
+			<div class="container_name">
+				<!--  
+					flexbox_name: contenedor definido para
+					implementar flexbox
+				-->
+				<div class="flexbox_name">
+					<!--  
+						swiper: contenedor de swiper-wrapper la
+						clase mySwiper es implementada en javascript
+					-->
+					<div class="swiper mySwiper">
+						<!--  
+							swiper-wrapper: contenedor de swiper-slide
+						-->
+						<div class="swiper-wrapper">
+							<!--  
+								swiper-slide: contenedor de 1 tag-img y de
+								card_description
+							-->
+							<div class="swiper-slide">
+								<!--  
+									tag-img: imagen del slider
+								-->
+								<img src="assets/img/01.jpg" alt="img" />
+
+								<!--  
+									card_description: contenedor de 1 tag-h4, 1 tag-p
+									y 1 tag-a
+								-->
+								<div class="card-description">
+									<!--  
+										tag-h4: implementada para el titulo del slider
+									-->
+									<h4>Title card</h4>
+
+									<!--  
+										tag-p: implementada para el parrafo del slider
+									-->
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+										enim possimus dolorum non, modi sunt ips.
+									</p>
+
+									<!--  
+										tag-a: implementada para el boton del slider
+									-->
+									<a href="#">Ver más</a>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<img src="assets/img/02.jpg" alt="img" />
+
+								<div class="card-description">
+									<h4>Title card</h4>
+
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+										enim possimus dolorum non, modi sunt ips.
+									</p>
+
+									<a href="#">Ver más</a>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<img src="assets/img/03.jpg" alt="img" />
+
+								<div class="card-description">
+									<h4>Title card</h4>
+
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+										enim possimus dolorum non, modi sunt ips.
+									</p>
+
+									<a href="#">Ver más</a>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<img src="assets/img/04.jpg" alt="img" />
+
+								<div class="card-description">
+									<h4>Title card</h4>
+
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+										enim possimus dolorum non, modi sunt ips.
+									</p>
+
+									<a href="#">Ver más</a>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<img src="assets/img/05.jpg" alt="img" />
+
+								<div class="card-description">
+									<h4>Title card</h4>
+
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+										enim possimus dolorum non, modi sunt ips.
+									</p>
+
+									<a href="#">Ver más</a>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<img src="assets/img/06.jpg" alt="img" />
+
+								<div class="card-description">
+									<h4>Title card</h4>
+
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+										enim possimus dolorum non, modi sunt ips.
+									</p>
+
+									<a href="#">Ver más</a>
+								</div>
+							</div>
+						</div>
+
+						<!--  
+							swiper-pagination: este contenedor tiene definido por
+							defecto los botones que marcan el slider esta misma
+							clase es implementada en javascript
+						-->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>footer</footer>
+
+		<!-- Swiper js -->
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>

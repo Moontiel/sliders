@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header,
+footer {
+  text-align: center;
+  background-color: cadetblue;
+  color: #fff;
+  height: 70px;
+}
+
+/*
+	section_name: contenedor definido para implementar
+	margin o padding con el fin de separar las secciones
+	entre si
+*/
+.section_name {
+  padding: 50px 0;
+  /*
+		container_name: contenedor definido para manejar
+		el responsive implementando width
+	*/
+}
+
+.section_name .container_name {
+  width: 90%;
+  margin: 0 auto;
+  /*
+			flexbox_name: contenedor definido para 
+			implementar flexbox si se requiere
+		*/
+}
+
+.section_name .container_name .flexbox_name {
+  /*
+				swiper: para modificar el ancho o alto de este 
+				contenedor implementamos la propiedad width y heigth
+				este nos ayuda a que los elementos contenidos por
+				este no desmaqueten
+			*/
+}
+
+.section_name .container_name .flexbox_name .swiper {
+  width: 100%;
+  height: 400px;
+  /*
+					swiper-wrapper: es importante definirle un height
+					heredado por su contenedor padre swiper ya que puede
+					ocacionar desmaquetado
+				*/
+  /*
+					swiper-pagination: tiene definido por defecto 
+					position: absolute por lo que si implementamos
+					la propiedad right podemos posicionar los puntos
+					que marcan el slider, tambien podemos manejar el 
+					width de este contenedor y el centrado de los iconos
+				*/
+}
+
+.section_name .container_name .flexbox_name .swiper .swiper-wrapper {
+  height: inherit;
+  /*
+						swiper-slide
+					*/
+}
+
+.section_name .container_name .flexbox_name .swiper .swiper-wrapper .swiper-slide {
+  /*
+							tag-img: la propiedad vertical-align: top 
+							remueve el espaciado que genera el navegador
+							en las tag-img, es importante definir un width
+							y height igual al de su contenedor padre mas la
+							propiedad object-fit: cover; para que esta se 
+							ajuste al contenedor 
+						*/
+}
+
+.section_name .container_name .flexbox_name .swiper .swiper-wrapper .swiper-slide img {
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section_name .container_name .flexbox_name .swiper .swiper-pagination {
+  right: 30px;
+  /*
+						swiper-pagination-bullet: a travez de esta clase podemos 
+						modificar el width y height de los iconos de la paginacion 
+						y con margin separarlos entre si
+					*/
+  /*
+						swiper-pagination-bullet-active: por medio de esta clase 
+						podemos modificar el color de los iconos de la paginacion 
+						cuando estos esten activos
+					*/
+}
+
+.section_name .container_name .flexbox_name .swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 10px 0;
+  background-color: #ccc;
+  border: 2px solid orangered;
+  border-radius: 100%;
+}
+
+.section_name .container_name .flexbox_name .swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: orangered;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,228 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header,
+footer {
+  text-align: center;
+  background-color: cadetblue;
+  color: #fff;
+  height: 70px;
+}
+
+/*
+	section_name: contenedor definido para implementar
+	margin o padding con el fin de separar las secciones
+	entre si
+*/
+.section_name {
+  padding: 50px 0;
+  /*
+		container_name: contenedor definido para manejar
+		el responsive implementando width
+	*/
+}
+
+.section_name .container_name {
+  width: 90%;
+  margin: 0 auto;
+  /*
+			flexbox_name: contenedor definido para 
+			implementar flexbox si se requiere
+		*/
+}
+
+.section_name .container_name .flexbox_name {
+  /*
+				box_name: definimos position: relative ya que sus elementos
+                hijos pueden tener position: absolute; este contenedor es el 
+                encargado de darle el ancho y alto al slider
+			*/
+  /*
+                content_dots: definimos flexbox y sus propiedades justify-content
+                y align-items mas un height para centrar los puntos marcadores
+                del slider horizontal y verticalmente
+            */
+}
+
+.section_name .container_name .flexbox_name .content_slider {
+  position: relative;
+  height: 360px;
+  /*
+                    box_slider: para este contenedor definimos un height heredado
+                    de su contenedor padre content_slider de esta manera todos
+                    los elementos que este contenga se van a ajustar a esta 
+                    altura
+                */
+  /*
+                    box_icons: definimos position: absolute de esta manera
+                    la imagen pasa a estar detras de este contenedor haciendo
+                    uso de las propiedades top, left, right y un height heredado
+                    este toma todo el ancho de su contenedor padre finalmente
+                    definimos flexbox y sus propiedades justify-content y
+                    align-items para centrar la mascara vertical y horizontalmente
+                */
+}
+
+.section_name .container_name .flexbox_name .content_slider .box_slider {
+  height: inherit;
+  /*
+                        slider_caption: definimos position: absolute de esta manera
+                        la imagen pasa a estar detras de este contenedor haciendo
+                        uso de las propiedades top, left, right y un height heredado
+                        este toma todo el ancho de su contenedor padre finalmente
+                        definimos flexbox y sus propiedades justify-content y
+                        align-items para centrar la mascara vertical y horizontalmente
+                    */
+  /*
+                        tag-img: la propiedad vertical-align: top 
+                        remueve el espaciado que genera el navegador
+                        en las tag-img, es importante definir un width
+                        y height igual al de su contenedor padre mas la
+                        propiedad object-fit: cover; para que esta se 
+                        ajuste al contenedor 
+                    */
+}
+
+.section_name .container_name .flexbox_name .content_slider .box_slider .slider_caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.616);
+  /*
+                            tag-h3
+                        */
+  /*
+                            tag-p
+                        */
+}
+
+.section_name .container_name .flexbox_name .content_slider .box_slider .slider_caption h3 {
+  font-size: 2rem;
+  margin-bottom: 0;
+  color: white;
+}
+
+.section_name .container_name .flexbox_name .content_slider .box_slider .slider_caption p {
+  margin-bottom: 0;
+  color: white;
+  /*
+                                @query 991px <== : removemos de la vista el
+                                parrafo
+                            */
+}
+
+@media (max-width: 991px) {
+  .section_name .container_name .flexbox_name .content_slider .box_slider .slider_caption p {
+    display: none;
+  }
+}
+
+.section_name .container_name .flexbox_name .content_slider .box_slider img {
+  vertical-align: top;
+  width: 100%;
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section_name .container_name .flexbox_name .content_slider .box_icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*
+                        tag-svg
+                    */
+}
+
+.section_name .container_name .flexbox_name .content_slider .box_icons svg {
+  background-color: green;
+  fill: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin: 0 50px;
+  -webkit-box-shadow: 0 0 12px 0 #ccc;
+          box-shadow: 0 0 12px 0 #ccc;
+  cursor: pointer;
+}
+
+.section_name .container_name .flexbox_name .content_dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*  
+                    dot_slider: implementamos display: block para
+                    poder darles width y height a la tag-span que
+                    por defecto su display es inline luego con las
+                    propieades border, border-radius y margin terminamos
+                    de darle el forma a los puntos
+                */
+}
+
+.section_name .container_name .flexbox_name .content_dots .dot_slider {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid green;
+  border-radius: 100%;
+  margin: 0 8px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  /*
+                        cuando hacemos :hover sobr este elemento
+                        cambiamos el color de fondo
+                    */
+  /*
+                        js_dot_active: clase añadida con javascript que 
+                        añade un background al punto que se encuentra
+                        activo
+                    */
+}
+
+.section_name .container_name .flexbox_name .content_dots .dot_slider:hover {
+  background-color: green;
+}
+
+.section_name .container_name .flexbox_name .content_dots .dot_slider.js_dot_active {
+  background-color: green;
+}
+/*# sourceMappingURL=style.css.map */

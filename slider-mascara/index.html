@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider mascara</title>
+    <link rel="stylesheet" href="./sass/style.css">
+    <!-- Swiper Carrusel -->
+		<link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+</head>
+<body>
+    <header>header</header>
+
+    <!-- 
+        seccion_name: contenedor de la seccion
+    -->
+    <div class="section_name">
+        <!--  
+            container_name: contenedor encargado
+            del responsive
+        -->
+        <div class="container_name">
+            <!--  
+                flexbox_name: contenedor definido
+                para implementar flebox
+            -->
+            <div class="flexbox_name">
+                <!-- 
+                    swiper: contenedor de swiper-wrapper la
+                    clase mySwiper es implementada en javascript
+                -->
+                <div class="swiper mySwiper">
+                    <!-- 
+                        swiper: contenedor de swiper-slide
+                    -->
+                    <div class="swiper-wrapper">
+                        <!-- 
+                            swiper-slide: contenedor de box_name y 1 tag-img 
+                            elementos que conforman el slider
+                        -->
+                        <div class="swiper-slide">
+                            <!-- 
+                                box_name: contiene 1 tag-h2 y 1 tag-p
+                            -->
+                            <div class="box_name">	
+                               <!-- 
+                                    tag-h2: implementada para el titulo del
+                                    slider
+                                -->
+                                <h2>Title one</h2>
+                                
+                                <!--  
+                                    tag-p: etiqueta implementada para el parrafo
+                                    del slider
+                                -->
+                                <p>Lorem, ipsum dolor.</p>
+                            </div>
+
+                            <!--  
+                                tag-img: imagen del slider
+                            -->
+                            <img src="./assets/img/img-min-3.jpg" alt="img" />
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box_name">					
+                                <h2>Title two</h2>
+                                
+                                <p>Lorem, ipsum dolor.</p>
+                            </div>
+
+                            <img src="./assets/img/img-min-7.jpg" alt="img" />
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box_name">					
+                                <h2>Title three</h2>
+                                
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+
+                            <img src="./assets/img/img-min-4.jpg" alt="img" />
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
+                    content_icon_slider: contenedor de los 
+                    iconos next y prev del slider
+                -->
+                <div class="box_icon_slider">
+                    <!--  
+                        swiper-button-prev y swiper-button-next: 
+                        estas clases son implementadas en javascript
+                    -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>footer</footer>
+
+    <!-- Swiper JS -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
